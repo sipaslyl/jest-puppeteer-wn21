@@ -13,13 +13,13 @@ test('should generate a valid text output', () => {
 
 test('should create an element with text and correct class', async () => {
  const browser = await puppeteer.launch({
-   headless: false,
-    slowMo: 80,
-    args: ['--window-size=1920,1080']
+   headless: true,
+    //slowMo: 80,
+    //args: ['--window-size=1920,1080']
  });
  const page = await browser.newPage();
  await page.goto(
-   'PATH TO YOUR INDEX FILE VIA THE BROWSER GOES HERE'
+   'https://jest-puppeteer-wn21.sipaslyl.repl.co/index.html'
  );
  await page.click('input#name');
  await page.type('input#name', 'Anna');
